@@ -1,4 +1,4 @@
-function jugarAdivinarNumero() {
+function jugarNumerología() {
     const numeroAleatorio = Math.floor(Math.random() * 100 + 1);
 
     let intentos = 0;
@@ -6,11 +6,11 @@ function jugarAdivinarNumero() {
 
     while (adivinado === false) {
 
-        const intento = parseInt(prompt("Intenta adivinar que número estoy pensando del 1 al 10"));
+        const intento = parseInt(prompt("Adivina que número estoy pensando del 1 al 10."));
         intentos++;
         
         if (intento === numeroAleatorio) {
-            alert("¡Si, me ganaste en solo " + intentos + " intentos!");
+            alert("¡Si, el número era " + numeroAleatorio + ". Me ganaste en solo " + intentos + " intentos!");
             adivinado = true;
 
             let juguemos = prompt("¿Jugamos?");
@@ -19,7 +19,7 @@ function jugarAdivinarNumero() {
             } else {
                 alert ("Gracias por jugar conmigo");
             }
-            
+
         } else if (intento < numeroAleatorio) {
             alert("Fallaste mi chavo, es mas, inténtalo otra vez.");
         } else if (intento > numeroAleatorio) {
@@ -29,3 +29,5 @@ function jugarAdivinarNumero() {
         }
     }   
 }
+
+jugarNumerología();
