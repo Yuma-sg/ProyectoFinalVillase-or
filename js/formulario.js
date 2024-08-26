@@ -1,5 +1,5 @@
 function jugarAdivinarNumero() {
-    const numeroAleatorio = 8;
+    const numeroAleatorio = Math.floor(Math.random() * 100 + 1);
 
     let intentos = 0;
     let adivinado = false;
@@ -13,19 +13,19 @@ function jugarAdivinarNumero() {
             alert("¡Si, me ganaste en solo " + intentos + " intentos!");
             adivinado = true;
 
-            let juguemos = prompt("¿Jugamos?")
+            let juguemos = prompt("¿Jugamos?");
             if (juguemos === true) {
                 jugarAdivinarNumero();
             } else {
                 alert ("Gracias por jugar conmigo");
             }
-
+            
         } else if (intento < numeroAleatorio) {
             alert("Fallaste mi chavo, es mas, inténtalo otra vez.");
-        } else if ("intento < numeroAleatorio") {
+        } else if (intento > numeroAleatorio) {
             alert("Te pasaste, es menos, siguelo intentando.");
         } else {
-            alert("Eso no es válido, intenta con números por favor.")
+            alert("Eso no es válido, intenta con números por favor.");
         }
     }   
 }
