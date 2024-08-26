@@ -13,7 +13,7 @@ function jugarNumerología() {
             alert("¡Si, el número era " + numeroAleatorio + ". Me ganaste en solo " + intentos + " intentos!");
             adivinado = true;
 
-            let juguemos = prompt("¿Jugamos?");
+            let juguemos = confirm("¿Jugamos?");
             if (juguemos === true) {
                 jugarAdivinarNumero();
             } else {
