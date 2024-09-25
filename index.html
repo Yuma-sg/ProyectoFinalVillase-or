@@ -3,12 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprovados y Reprovados</title>
+    <title>Gastronomía Vilches</title>
     <link rel="shortcut icon" href="./img/favicon-vv.png" type="image/x-icon">
-    <link rel="stylesheet" href="./estilos/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+
+    
+<header class="header">
+    <div class="container">
+        <h1>Gastronomía Vilches</h1>
+    </div>
+</header>
+
+<main class="main">
+    <section class="container">
+        <h2 class="titulo">Productos</h2>
+        <div class="producto" id="productos">
+            <div class="producto">
+                <img class="producto-img" src="./img/cuchillo-a.jpg" alt="">
+                <h3>Cuchillo A</h3>
+                <p>$2000</p>
+                <button class="producto-btn">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto-img" src="./img/cuchillo-b.jpg" alt="">
+                <h3>Cuchillo B</h3>
+                <p>$4000</p>
+                <button class="producto-btn">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto-img" src="./img/cuchillo-c.jpg" alt="">
+                <h3>Cuchillo C</h3>
+                <p>$6000</p>
+                <button class="producto-btn">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <h2 class="titulo">Carrito 🛒</h2>
+        <div class="carrito">
+            <div id="carrito-vacio">
+                <h4>Tu carrito está vacío. 😒</h4>
+            </div>
+            <div class="carrito-productos d-none" id="carrito-productos">
+                <div class="carrito-producto">
+                    <h3>Cuchillo A</h3>
+                    <p>$2000</p>
+                    <button class="carrito-producto-btn">✖️</button>
+                </div>
+                <div class="carrito-producto">
+                    <h3>Cuchillo A</h3>
+                    <p>$2000</p>
+                    <button class="carrito-producto-btn">✖️</button>
+                </div>
+                <div class="carrito-producto">
+                    <h3>Cuchillo A</h3>
+                    <p>$2000</p>
+                    <button class="carrito-producto-btn">✖️</button>
+                </div>
+            </div>
+            <div class="carrito-total">
+                <h2>Total: <span id="carrito-total">$0</span></h2>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    GastonomíaVilches ®️
+</footer>
+
+
+
+
+
     <!--Solo veremos como seleccionar restaurantes aprovados y reprovados para complementar el proyecto de Desarrollo Web de "consultoria gastronómica"-->
 
     <h1 id="titulo" class="verde principal">Restaurantes <em>aprovados y reprovados</em></h1>
