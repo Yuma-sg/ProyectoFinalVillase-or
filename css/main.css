@@ -353,12 +353,12 @@ main {
     }
 
     .header-mobile .logo {
-        color: var(--clr-white);
+        color: var(--clr-accent);
     }
 
     .open-menu, .close-menu {
         background-color: transparent;
-        color: var(--clr-white);
+        color: var(--clr-accent);
         border: 0;
         font-size: 2rem;
         cursor: pointer;
