@@ -1,0 +1,146 @@
+[
+    {
+        "id": "cuchillo-01",
+        "titulo": "Cuchillo 01",
+        "imagen": "./img/cuchillos/cuchillo-01.jpg",
+        "categoria": {
+            "nombre": "Cuchillos",
+            "id": "cuchillos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cuchillo-02",
+        "titulo": "Cuchillo 02",
+        "imagen": "./img/cuchillos/cuchillo-02.jpg",
+        "categoria": {
+            "nombre": "Cuchillos",
+            "id": "cuchillos"
+        },
+        "precio": 12000
+    },
+    {
+        "id": "cuchillo-03",
+        "titulo": "Cuchillo 03",
+        "imagen": "./img/cuchillos/cuchillo-03.jpg",
+        "categoria": {
+            "nombre": "Cuchillos",
+            "id": "cuchillos"
+        },
+        "precio": 14000
+    },
+    {
+        "id": "cuchillo-04",
+        "titulo": "Cuchillo 04",
+        "imagen": "./img/cuchillos/cuchillo-04.jpg",
+        "categoria": {
+            "nombre": "Cuchillos",
+            "id": "cuchillos"
+        },
+        "precio": 14000
+    },
+    {
+        "id": "cuchillo-05",
+        "titulo": "Cuchillo 05",
+        "imagen": "./img/cuchillos/cuchillo-05.jpg",
+        "categoria": {
+            "nombre": "Cuchillos",
+            "id": "cuchillos"
+        },
+        "precio": 14000
+    },
+
+
+    {
+        "id": "tabla-01",
+        "titulo": "Tabla 01",
+        "imagen": "./img/tablas/tab-01.jpg",
+        "categoria": {
+            "nombre": "Tablas",
+            "id": "tablas"
+        },
+        "precio": 1100
+    },
+    {
+        "id": "tabla-02",
+        "titulo": "Tabla 02",
+        "imagen": "./img/tablas/tab-02.jpg",
+        "categoria": {
+            "nombre": "Tablas",
+            "id": "tablas"
+        },
+        "precio": 1050
+    },
+    {
+        "id": "tabla-03",
+        "titulo": "Tabla 03",
+        "imagen": "./img/tablas/tab-03.jpg",
+        "categoria": {
+            "nombre": "Tablas",
+            "id": "tablas"
+        },
+        "precio": 1400
+    },
+    {
+        "id": "tabla-04",
+        "titulo": "Tabla 04",
+        "imagen": "./img/tablas/tab-04.jpg",
+        "categoria": {
+            "nombre": "Tablas",
+            "id": "tablas"
+        },
+        "precio": 15000
+    },
+
+
+    {
+        "id": "casuela-01",
+        "titulo": "Casuela 01",
+        "imagen": "./img/casuelas/ca-01.jpg",
+        "categoria": {
+            "nombre": "Casuelas",
+            "id": "casuelas"
+        },
+        "precio": 2000
+    },
+    {
+        "id": "casuela-02",
+        "titulo": "Casuela 02",
+        "imagen": "./img/casuelas/ca-02.jpg",
+        "categoria": {
+            "nombre": "Casuelas",
+            "id": "casuelas"
+        },
+        "precio": 500
+    },
+    {
+        "id": "casuela-03",
+        "titulo": "Casuela 03",
+        "imagen": "./img/casuelas/ca-03.jpg",
+        "categoria": {
+            "nombre": "Casuelas",
+            "id": "casuelas"
+        },
+        "precio": 1500
+    },
+    {
+        "id": "casuela-04",
+        "titulo": "Casuela 04",
+        "imagen": "./img/casuelas/ca-04.jpg",
+        "categoria": {
+            "nombre": "Casuelas",
+            "id": "casuelas"
+        },
+        "precio": 2000
+    },
+    {
+        "id": "casuela-05",
+        "titulo": "Casuela 05",
+        "imagen": "./img/casuelas/ca-05.jpg",
+        "categoria": {
+            "nombre": "Casuelas",
+            "id": "casuelas"
+        },
+        "precio": 2500
+    }
+]

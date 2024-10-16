@@ -1,290 +1,126 @@
-/*********************
-// Primera Entrega "juego de numeros al azar"
-/********************* */
+let productos = [];
 
-/*function jugarNumerología() {
-    const numeroAleatorio = Math.floor(Math.random() * 100 + 1);
-
-    let intentos = 0;
-    let adivinado = false;
-
-    while (adivinado === false) {
-
-        const intento = parseInt(prompt("Adivina que número estoy pensando del 1 al 10."));
-        intentos++;
-        
-        if (intento === numeroAleatorio) {
-            alert("¡Si, el número era " + numeroAleatorio + ". Me ganaste en solo " + intentos + " intentos!");
-            adivinado = true;
-
-            let juguemos = confirm("¿Jugamos?");
-            if (juguemos === true) {
-                jugarAdivinarNumero();
-            } else {
-                alert ("Gracias por jugar conmigo");
-            }
-
-        } else if (intento < numeroAleatorio) {
-            alert("Fallaste mi chavo, es mas, inténtalo otra vez.");
-        } else if (intento > numeroAleatorio) {
-            alert("Te pasaste, es menos, siguelo intentando.");
-        } else {
-            alert("Eso no es válido, intenta con números por favor.");
-        }
-    }   
-}
-
-jugarNumerología();*/
-
-/*********************
-// Segunda Entrega "Restaurantes aprovados o reprovados"
-/********************* */
-
-//function ingresarNotas() {
-  //  let restaurantes = [];
-    //let continuar = true;
-
-    //while (continuar === true) {
-      //  const nombre = prompt("Ingresa el nombre del restaurante");
-        //const nota = parseFloat(prompt("Ingresa la nota del restaurante"));
-
-        //if (isNaN(nota) || nota < 0 || nota > 100) {
-          //  alert("Ingresa una nota válida entre 0 y 100.");
-        //} else {
-          //  restaurantes.push({nombre: nombre, nota: nota});
-        //}
-
-        //const respuesta = prompt("¿Quieres agregar otro restaurante? Si/No").toLowerCase();
-        //if (respuesta === "si") {
-          //  continuar = true;
-        //} else {
-          //  continuar = false;
-        //}
-    //}
-
-    //return restaurantes;
-//}
-
-// CALCULAR EL RESULTADO DE LOS RESTAURANTES
-
-//restaurantes = [
-  //  {
-    //    nombre: "Resta el Viktor",
-      //  nota: 100
-    //},
-    //{
-      //  nombre: "Tikal",
-        //nota: 50
-    //},
-    //{
-      //  nombre: "El Almacen del Bife",
-        //nota: 80
-    //},
-    //{
-      //  nombre: "La Tita",
-        //nota: 40
-    //},
-    //{
-      //  nombre: "Carrera Moto",
-        //nota: 90
-    //},
-//]
-
-// CALCULA EL PROMEDIO DE LOS RESTAURANTES
-
-//function calcularPromedio(restaurantes) {
-  //  const suma = restaurantes.reduce((acc, restaurante) => acc + restaurante.nota, 0);
-    //const promedio = suma / restaurantes.length;
-    //return promedio;
-//}
-
-// LOS MEJORES RESTAURANTES
-
-//function mejoresRestaurantes(restaurantes) {
-  //  let mejorNota = restaurantes[0].nota;
-
-    //restaurantes.forEach(restaurante => {
-      //  if (restaurante.nota > mejorNota) {
-        //    mejorNota = restaurante.nota
-        //}
-    //});
-
-    //let mejores = restaurantes.filter((restaurante) => restaurante.nota === mejorNota);
-
-    //return mejores;
-//}
-
-// LOS PEORES RESTAURANTES
-
-//function peoresRestaurantes(restaurantes) {
-  //  let peorNota = restaurantes[0].nota;
-
-    //restaurantes.forEach(restaurante => {
-      //  if (restaurante.nota < peorNota) {
-        //    peorNota = restaurante.nota;
-        //}
-    //});
-
-    //let peores = restaurantes.filter((restaurante) => restaurante.nota === peorNota);
-
-    //return peores;
-//}
-
-// APROVADOS Y REPROVADOS
-
-//function mostrarAprovadosYDesaprovados(restaurantes) {
-  //  let aprovados = [];
-    //let reprovados = [];
-
-    //restaurantes.forEach((restaurante) => {
-      //  if (restaurante.nota >= 60) {
-        //    aprovados.push(restaurante);
-        //} else {
-          //  reprovados.push(restaurante);
-        //}
-    //});
-
-    //console.log("***Restaurantes aprovados***");
-    //aprovados.forEach((restaurante) => {
-      //  console.log(restaurante.nombre + " con nota de " + restaurante.nota);
-    //})
-    
-    //console.log("***Restaurantes reprovados***");
-    //reprovados.forEach((restaurante) => {
-      //  console.log(restaurante.nombre + " con nota de " + restaurante.nota);
-    //})
-//}
-
-//mostrarAprovadosYDesaprovados(restaurantes);
-
-/*let carrito = [];*/
-//**********AQUI INICIA PREENTREGA3VILLASEÑOR DEL CURSO DE JS PARA SECCION DE CARRITO DE LOS CUCHILLOS GASTRONOMICOS VILCHES ***************//
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-const productos = [
-    {
-        id: "abrigo-a",
-        titulo: "Cuchillo A",
-        precio: 2000,
-        img: "./img/cuchillo-a.jpg",
-    },
-    {
-        id: "abrigo-b",
-        titulo: "Cuchillo B",
-        precio: 4000,
-        img: "./img/cuchillo-b.jpg",
-    },
-    {
-        id: "abrigo-c",
-        titulo: "Cuchillo C",
-        precio: 6000,
-        img: "./img/cuchillo-c.jpg",
-    }
-];
-
-const contenedorProductos = document.querySelector("#productos");
-const carritoVacio = document.querySelector("#carrito-vacio");
-const carritoComprado = document.querySelector("#carrito-comprado");
-const carritoProductos = document.querySelector("#carrito-productos");
-const carritoTotal = document.querySelector("#carrito.total");
-
-/******ESTO SOLO ES REFERENCIA DEL HTML QUE SE PASO A JS*****/
-/* 
-            <div class="producto">
-                <img class="producto-img" src="./img/cuchillo-a.jpg" alt="">
-                <h3>Cuchillo A</h3>
-                <p>$2000</p>
-                <button class="producto-btn">Agregar al carrito</button>
-            </div>
-*/
-
-productos.forEach((producto) => {
-    let div = document.createElement("div");
-    div.classList.add("producto");
-    div.innerHTML = `
-        <img class="producto-img" src=${producto.img}>
-        <h3>${producto.titulo}</h3>
-        <p>${producto.precio}</p>
-    `;
-
-    let button = document.createElement("button");
-    button.classList.add("producto-btn");
-    button.innerText = "Agregar al carrito";
-    button.addEventListener("click", () => {
-        agregarAlCarrito(producto);
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
     })
 
-    div.append(button);
 
-    contenedorProductos.append(div);
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
+
+
+botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
+    aside.classList.remove("aside-visible");
+}))
+
+
+function cargarProductos(productosElegidos) {
+
+    contenedorProductos.innerHTML = "";
+
+    productosElegidos.forEach(producto => {
+
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        `;
+
+        contenedorProductos.append(div);
+    })
+
+    actualizarBotonesAgregar();
+}
+
+
+botonesCategorias.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+
+        botonesCategorias.forEach(boton => boton.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+
+        if (e.currentTarget.id != "todos") {
+            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
+        } else {
+            tituloPrincipal.innerText = "Todos los productos";
+            cargarProductos(productos);
+        }
+
+    })
 });
 
-function actualizarCarrito() {
-    if (carrito.length === 0) {
-        carritoVacio.classList.remove("d-none");
-        carritoProductos.classList.add("d-none");
+function actualizarBotonesAgregar() {
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
+}
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumerito();
+} else {
+    productosEnCarrito = [];
+}
+
+function agregarAlCarrito(e) {
+
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #12AC12, #00FF00)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.5rem',
+            y: '1.5rem'
+          },
+        onClick: function(){}
+      }).showToast();
+
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
     } else {
-        carritoVacio.classList.add("d-none");
-        carritoProductos.classList.remove("d-none");
-
-        carritoProductos.innerHTML = "";
-        carrito.forEach((producto) => {
-            let div = document.createElement("div");
-            div.classList.add("carrito-producto");
-            div.innerHTML = `
-                <h3>${producto.titulo}</h3>
-                <p>${producto.precio}</p>
-                <p>Cant: ${producto.cantidad}</p>
-                <p>Subt: $${producto.precio * producto.cantidad}</p>
-            `;
-
-            let button = document.createElement("button");
-            button.classList.add("carrito-producto-btn");
-            button.innerText = "✖️";
-            button.addEventListener("click", () => {
-                borrarDelCarrito(producto);
-            });
-
-            div.append(button);
-            carritoProductos.append(div);
-        });
-    }
-    actualizarTotal();
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-/******ESTO SOLO ES REFERENCIA DEL HTML QUE SE PASO A JS*****/
-/* 
-    <div class="carrito-producto">
-        <h3>Cuchillo A</h3>
-        <p>$2000</p>
-        <button class="carrito-producto-btn">✖️</button>
-    </div> 
-*/
-
-function agregarAlCarrito(producto) {
-    let itemEncontrado = carrito.find((item) => item.id === producto.id);
-
-    if (itemEncontrado) {
-        itemEncontrado.cantidad++;
-    } else {
-        carrito.push({...producto, cantidad: 1});
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
     }
 
-    actualizarCarrito();
+    actualizarNumerito();
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
-function borrarDelCarrito(producto) {
-        let indice = carrito.findIndex((item) => item.id === producto.id);
-        carrito.splice(indice, 1);
-
-        actualizarCarrito();
+function actualizarNumerito() {
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
 }
-
-function actualizarTotal() {
-    let total = carrito.reduce((acc, prod) => acc + (prod.precio * prod.cantidad), 0);
-    carritoTotal.innerText = `$${total}`;
-}
-
-actualizarCarrito();
